@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/album_container_content"
+    tools:context=".Fragments.AlbumContentFragment"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/album_header_panel"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/album_back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_back_btn" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/album_info"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_below="@+id/album_header_panel">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/album_cover_holder"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/album_cover"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_toEndOf="@+id/album_cover_holder"
+            android:layout_toStartOf="@+id/album_list_count">
+
+            <TextView
+                android:id="@+id/album_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Album artist"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/album_content_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/album_artist"
+                android:text="Album title"
+                android:textColor="@color/white"
+                android:singleLine="true"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/album_list_count"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="18dp"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:id="@+id/total_album_songs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toStartOf="@+id/songs_text"
+                android:text="xx"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/songs_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text=" songs"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/album_info"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/quick_shuffle"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search?..."
+                android:textSize="16sp"
+                android:padding="6dp"
+                android:background="@drawable/main_bg"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/quick_shuffle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toStartOf="@id/sort"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_shuffle_on" />
+
+        <ImageView
+            android:id="@+id/sort"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="18dp"
+            android:src="@drawable/ic_sort" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/album_songs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/panel"
+        android:layout_alignParentBottom="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_album_songs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

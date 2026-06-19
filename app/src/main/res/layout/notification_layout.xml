@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="128dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_bg"
+    android:id="@+id/notification"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/header_holder"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_height="24dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/app_icon"
+            android:ellipsize="marquee"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="El.60I Music"
+            android:textColor="@color/bg_white"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:clickable="true"
+            android:contentDescription="Cancel"
+            android:focusable="true"
+            android:src="@drawable/ic_close" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/actions_holder"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header_holder"
+        android:layout_height="108dp">
+
+        <RelativeLayout
+            android:id="@+id/album_cover_holder"
+            android:layout_width="wrap_content"
+            android:padding="16dp"
+            android:layout_height="128dp">
+
+            <ImageView
+                android:id="@+id/album_cover"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/song_info_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/buttons_layout_1"
+            android:layout_toEndOf="@+id/album_cover_holder">
+
+            <TextView
+                android:id="@+id/song_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="left"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Song title"
+                android:textColor="@color/bg_white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/song_artist_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/song_name_1"
+                android:ellipsize="marquee"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="Artist"
+                android:textColor="@color/bg_white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/album_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/song_artist_1"
+                android:ellipsize="marquee"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="Album"
+                android:textColor="@color/bg_white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttons_layout_1"
+            android:layout_width="200dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/previous_btn_1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="2dp"
+                android:layout_toStartOf="@+id/play_pause_btn_1"
+                android:src="@drawable/ic_previous" />
+
+            <ImageView
+                android:id="@+id/play_pause_btn_1"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_pause_white" />
+
+            <ImageView
+                android:id="@+id/next_btn_1"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:layout_toEndOf="@+id/play_pause_btn_1"
+                android:src="@drawable/ic_next" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<paths>
+    <external-path
+        name="external"
+        path="."/>
+
+<!--    <external-path-->
+<!--        name="external_files"-->
+<!--        path="Android/data/com.toluwalase.musicapp0/files"/>-->
+
+<!--    <external-path-->
+<!--        name="external_music"-->
+<!--        path="Music/"/>-->
+
+    <external-path
+        name="external_sdcard"
+        path="/storage/6666-6432/"/>
+
+<!--    <external-files-path-->
+<!--        name="external_files"-->
+<!--        path="."/>-->
+</paths>

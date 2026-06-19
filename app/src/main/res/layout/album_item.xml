@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="96dp"
+    android:layout_height="148dp"
+    android:id="@+id/album_item"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/holder"
+        android:background="@drawable/main_bg">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:id="@+id/album_art"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/album_title"
+            android:layout_below="@+id/album_art"
+            android:text="Album name"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:singleLine="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/album_artist"
+            android:layout_below="@+id/album_title"
+            android:text="Artist name"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:singleLine="true"
+            android:gravity="left"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/album_songs_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/album_artist"
+            android:text="xx songs"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_centerVertical="true"
+            android:gravity="top"
+            android:singleLine="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

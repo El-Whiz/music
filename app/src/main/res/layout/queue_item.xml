@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/audio_item"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:padding="8dp"
+    android:background="@drawable/main_bg">
+
+    <RelativeLayout
+        android:id="@+id/options_holder_1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="5dp">
+
+        <ImageView
+            android:id="@+id/song_item_bullet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_bullet" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/music_img_holder"
+        android:layout_toEndOf="@+id/options_holder_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="5dp">
+
+        <ImageView
+            android:id="@+id/music_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@color/icon_grey"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_toEndOf="@+id/music_img_holder"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/options_holder_2">
+
+        <TextView
+            android:id="@+id/music_file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:text="File Name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/music_file_album"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/music_file_Artist"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:text="File Album"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/music_file_Artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/music_file_name"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:singleLine="true"
+            android:text="File Artist"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/options_holder_2"
+        android:layout_width="72dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="6dp"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/song_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_toStartOf="@+id/options"
+            android:singleLine="true"
+            android:text="X:XX"
+            android:textSize="10sp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_song_options"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
